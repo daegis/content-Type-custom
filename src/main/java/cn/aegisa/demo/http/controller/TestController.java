@@ -24,7 +24,7 @@ public class TestController {
 
     @RequestMapping("/test")
     @ResponseBody
-    public Object doTest(Student student, HttpServletRequest request) {
+    public Object doTest(HttpServletRequest request, Student student) {
         Map<String, String[]> parameterMap = request.getParameterMap();
         System.out.println(JSON.toJSONString(parameterMap));
         Map<String, Object> map = new HashMap<>();
